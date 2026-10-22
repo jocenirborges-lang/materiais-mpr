@@ -3,7 +3,7 @@ name: Deploy Automatico para InfinityFree
 on:
   push:
     branches:
-      - '**'  # Dispara em qualquer ramificação (main, principal, master)
+      - '**'
 
 jobs:
   web-deploy:
