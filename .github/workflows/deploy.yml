@@ -14,7 +14,7 @@ jobs:
       uses: actions/checkout@v4
 
     - name: Enviar Arquivos via FTP
-      uses: SamKirsh/FTP-Deploy-Action@v4.3.4
+      uses: SamKirsh/FTP-Deploy-Action@v4.3.5
       with:
         server: ${{ secrets.FTP_SERVER }}
         username: ${{ secrets.FTP_USERNAME }}
