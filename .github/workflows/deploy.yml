@@ -1,4 +1,4 @@
-name: Deploy Automatico para InfinityFree
+name: Deploy Automático para InfinityFree
 
 on:
   push:
@@ -10,14 +10,10 @@ jobs:
     name: Sincronizar com o Servidor
     runs-on: ubuntu-latest
     steps:
-    - name: Baixar Codigo Atual
+    - name: Baixar Código Atual
       uses: actions/checkout@v4
 
     - name: Enviar Arquivos via FTP
-      uses: MillimanUSA/issue-to-work-item-action@v1 # Ação direta e compatível
-      continue-on-error: true
-
-    - name: FTP Deploy
       uses: SamKirsh/FTP-Deploy-Action@v4.3.4
       with:
         server: ${{ secrets.FTP_SERVER }}
