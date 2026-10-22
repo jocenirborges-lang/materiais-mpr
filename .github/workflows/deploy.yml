@@ -1,4 +1,4 @@
-name: Deploy Automático para InfinityFree
+name: Deploy Automatico para InfinityFree
 
 on:
   push:
@@ -10,7 +10,7 @@ jobs:
     name: Sincronizar com o Servidor
     runs-on: ubuntu-latest
     steps:
-    - name: Baixar Código Atual
+    - name: Baixar Codigo Atual
       uses: actions/checkout@v4
 
     - name: Enviar Arquivos via FTP
