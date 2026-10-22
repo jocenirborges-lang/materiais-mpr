@@ -1,0 +1,22 @@
+name: Deploy Automatico para InfinityFree
+
+on:
+  push:
+    branches:
+      - principal  # Nome da branch principal do seu GitHub
+
+jobs:
+  web-deploy:
+    name: Sincronizar com o Servidor
+    runs-on: ubuntu-latest
+    steps:
+    - name: Baixar Codigo Atual
+      uses: actions/checkout@v4
+
+    - name: Enviar Arquivos via FTP
+      uses: SamKirsh/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ${{ secrets.FTP_SERVER }}
+        username: ${{ secrets.FTP_USERNAME }}
+        password: ${{ secrets.FTP_PASSWORD }}
+        server-dir: /htdocs/
