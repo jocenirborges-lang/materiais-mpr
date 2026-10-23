@@ -3,7 +3,7 @@ name: Deploy Automatico para InfinityFree
 on:
   push:
     branches:
-      - '**'
+      - main
 
 jobs:
   web-deploy:
